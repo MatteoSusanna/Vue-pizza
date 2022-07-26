@@ -62,6 +62,12 @@ var app = new Vue({
 
         prezzo: 0,
 
+        //form inserimento pizza
+        nomePizza:'',
+        descrizionePizza: '',
+        urlPizza: '',
+        costoPizza: 0,
+
     },
     methods:{
         ifPrezzo(elemento){
@@ -76,6 +82,20 @@ var app = new Vue({
 
             this.prezzo = prezzoBase + prezzoImp + prezzoDim;
 
+        },
+
+        pushNuovaPizza(){
+            let newPizzaOggetto = {
+                'nome': this.nomePizza,
+                'descrizione': this.descrizionePizza,
+                'url': this.urlPizza,
+                'prezzo': parseInt(this.costoPizza),
+                'special': false
+            }
+
+            console.log(typeof this.costoPizza)
+            console.log(this.pizza)
+            this.pizza.push(newPizzaOggetto)
         }
     }
 

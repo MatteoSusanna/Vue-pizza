@@ -43,7 +43,24 @@
                         <div>{{pizza[counterPizza].descrizione}}</div>
 
                         <div>{{prezzo}}</div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <label>Nome Pizza</label>
+                            <input type="text" v-model="nomePizza">
 
+                            <label>Descrizione</label>
+                            <input type="text" v-model="descrizionePizza">
+
+                            <label>url immagine</label>
+                            <input type="text" v-model="urlPizza">
+
+                            <label>costo</label>
+                            <input type="number" v-model="costoPizza">
+
+                            <button @click="pushNuovaPizza">Genera</button>
+                        </div>
+                        
                     </div>
 
 
